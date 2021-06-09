@@ -10,6 +10,6 @@ class TurbineController extends Controller
 {
     public function __invoke()
     {
-        return view('turbine', ['results' => (new InspectTurbine)->inspect()]);
+        return view('turbine', ['results' => (new InspectTurbine())->inspect()]);
     }
 }
