@@ -1,15 +1,20 @@
-/node_modules
+# Packages
+node_modules/
+vendor/
+
+# Environment-specific
+.env
+.env.backup
+.php_cs
+.phpunit.result.cache
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
-.env
-.env.backup
-.phpunit.result.cache
-docker-compose.override.yml
-Homestead.json
-Homestead.yaml
+
+# Logs
 npm-debug.log
 yarn-error.log
+
+# Editor files
 /.idea
 /.vscode
