@@ -2,4 +2,4 @@
 . "$(dirname "$0")/_/husky.sh"
 
 php ./tools/vendor/bin/php-cs-fixer fix --dry-run --config .php_cs
-php artisan test --parallel
+php artisan test
