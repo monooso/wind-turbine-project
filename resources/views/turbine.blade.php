@@ -1,21 +1,48 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<x-layouts.default>
+    <x-slot name="main">
+        <h1>Inspection results</h1>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Laravel</title>
-</head>
+        <div x-data="inspectionResults()">
+            <ol class="flex flex-row flex-wrap gap-4">
+                <template x-for="result in results" :key="result">
+                    <li class="bg-white px-4 py-3 rounded shadow" x-text="result"></li>
+                </template>
+            </ol>
 
-<body class="antialiased bg-indigo-100">
-    <h1>Inspection results</h1>
+            <button class="bg-indigo-700 px-6 py-5 text-indigo-50 rounded" type="submit" @click="fetchResults()" :disabled="isLoading">Fetch Results</button>
+        </div>
+    </x-slot>
 
-    <ol class="space-y-2">
-        @foreach ($results as $result)
-        <li class="bg-white inline-block px-4 py-3 rounded shadow">{{ $result }}</li>
-        @endforeach
-    </ol>
+    @push('scripts')
+    <script>
+        function inspectionResults() {
+            return {
+                // Properties
+                isLoading: false,
+                results: [],
+
+                // Methods
+                fetchResults() {
+                    this.isLoading = true
+
+                    fetch(new Request('/api/turbines'))
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error()
+                            }
+                            return response
+                        })
+                        .then(response => response.json())
+                        .then(json => this.results = json.data)
+                        .catch(error => this.results = ['Unable to load data'])
+                        .finally(() => this.isLoading = false)
+                }
+            }
+        }
+    </script>
+    @endpush
+</x-layouts.default>
+
 </body>
 
 </html>
