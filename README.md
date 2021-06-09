@@ -22,24 +22,10 @@ Displays a dummy "status" page for a wind turbine. Clicking the "refresh status"
 [tailwind]: https://tailwindcss.com/
 
 ## Getting started
-1. Choose your preferred [Laravel development environment](https://laravel.com/docs/8.x).
-2. Clone the repository:    
-   `git clone git@github.com:monooso/wind-turbine-project.git`
-3. Copy the example environment file:    
-   `cp .env.example .env`
-4. Install the application dependencies:    
-   `composer install`
-5. Install the code quality tools:    
-   `cd tools && composer install`
-6. Set up Husky:    
-   `husky install`
-7. Copy the PHP CS Fixer configuration file:    
-   `cp .php_cs.dist .php_cs`
-8. Set up the application key:    
-   `php artisan key:generate`
-9. Run the test suite to confirm everything is working correctly:    
-   `php artisan test`
-
+1. Choose your preferred [Laravel development environment](https://laravel.com/docs/8.x). Any of the officially supported methods should work.
+2. Clone the repository: `git clone git@github.com:monooso/wind-turbine-project.git`
+3. Run the setup script: `bash scripts/setup.sh`
+4. Run the test suite to confirm everything is working correctly: `php artisan test`
 
 ## Credits
 Photograph of wind turbine by [Nikolay Hristov](https://unsplash.com/@nikolayh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) via [Unsplash](https://unsplash.com/)
