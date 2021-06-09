@@ -31,6 +31,12 @@ jobs:
       - name: Install tooling dependencies
         run: cd tools && composer install --prefer-dist --no-progress
 
+      - name: Generate application key
+        run: php artisan key:generate
+
+      - name: Copy environment file
+        run: cp .env.example .env
+
       - name: Copy PHP CS Fixer configuration file
         run: cp .php_cs.dist .php_cs
 
