@@ -6,6 +6,7 @@ vendor/
 .env
 .env.backup
 .php_cs
+.php_cs.cache
 .phpunit.result.cache
 /public/hot
 /public/storage
