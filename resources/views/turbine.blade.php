@@ -14,13 +14,13 @@
                     <div x-show="results.length > 0">
                         <ol class="flex flex-row flex-wrap gap-x-2 gap-y-3 mt-4 text-sm">
                             <template x-for="result in results" :key="result">
-                                <li class="bg-indigo-50 px-2 py-1 rounded-sm text-indigo-700" x-text="result"></li>
+                                <li class="bg-gray-50 px-2 py-1 rounded-sm text-gray-600" x-text="result"></li>
                             </template>
                         </ol>
                     </div>
 
                     <div class="mt-4">
-                        <button class="bg-green-50 px-3 py-2 text-green-900 text-sm rounded transition hover:bg-green-100" type="submit" :disabled="isLoading" @click="fetchResults()">Refresh Status</button>
+                        <button class="border border-indigo-300 px-3 py-2 text-indigo-900 text-sm rounded transition hover:bg-indigo-50" type="submit" :disabled="isLoading" @click="fetchResults()">Refresh Status</button>
                     </div>
                 </div>
             </div>
