@@ -6,8 +6,8 @@
             </div>
 
             <div class="p-8 md:w-2/3">
-                <h2 class="font-bold text-xl">Ice Station Zebra</h2>
-                <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <h2 class="font-bold text-xl">Wind Station Zebra</h2>
+                <p class="mt-2 text-gray-600">Situated 10 miles off the coast of Norway, Zebra enjoys year-round bracing winds, midnight sun, and disgruntled fishermen.</p>
 
                 <h3 class="font-bold mt-6">Status history</h3>
                 <div x-data="inspectionResults()">
