@@ -11,14 +11,10 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-indigo-50 p-8 text-gray-900 md:p-16">
     <main>
         {{ $main }}
     </main>
-
-    <footer>
-        <p>&copy; {{ now()->format('Y') }} Stephen Lewis</p>
-    </footer>
 
     @stack('scripts')
 </body>
