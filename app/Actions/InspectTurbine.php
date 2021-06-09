@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace App\Actions;
 
-class InspectTurbine
+use App\Contracts\Inspector;
+
+final class InspectTurbine implements Inspector
 {
     /**
-     * Inspect the wind turbine, and return an array containing the results
+     * Inspect a wind turbine and return an array containing the results
      *
      * Count from 1 to 100.
      * - For multiples of 3, add 'Coating Damage' to the array.
